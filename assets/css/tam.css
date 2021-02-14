@@ -98,9 +98,8 @@ table {
 
 body {
     overflow-x: hidden;
-    background: #50a3a2;
-    background: linear-gradient(135deg, rgb(165, 155, 224) 0%, rgba(242,147,113,1) 100%);
-    background: linear-gradient(135deg, rgb(165, 155, 224) 0%, rgba(242,147,113,1) 100%);
+    background: #000000;
+    background: linear-gradient(135deg, rgb(192,192,192) 0%, rgb(0,0,0) 100%);
 }
 
 ::selection {
