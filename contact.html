@@ -255,11 +255,11 @@
                 emailjs.sendForm(serviceID, templateID, this).then(
                     (response) => {
                         console.log("SUCCESS!", response.status, response.text);
-                        alert("SUCCESS!");
+                        alert("Thanks for your enquiry.  I will get back to you as soon as possible.   -- Cheers, Kai");
                     },
                     (error) => {
-                        console.log("FAILED...", error);
-                        alert("FAILED...", error);
+                        console.log("Server Busy, Please try again later...", error);
+                        alert("Server Busy, Please try again later...", error);
                     }
                 );
             });
