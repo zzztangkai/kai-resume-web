@@ -162,7 +162,7 @@
                         </div>
                     </div>
                     <div class="contact-form mt-5">
-                        <form name="myForm">
+                        <form id="myForm">
                             <h5 class="section-subHead mb-2"> Contact Form</h5>
                             <div class="row">
                                 <div class="col-lg-6">
@@ -237,11 +237,34 @@
             emailjs.init("DHFvgdl2MX64yDwq2y-wQ");
         })();
     </script>
-
-
     <script>
         emailjs.sendForm("service_a7d3mie", "template_j42qi7g", "#myForm")
     </script>
+
+    <script>
+        // listen to the form submission
+        document
+            .getElementById("myForm")
+            .addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                const serviceID = "service_a7d3mie";
+                const templateID = "template_j42qi7g";
+
+                // send the email here
+                emailjs.sendForm(serviceID, templateID, this).then(
+                    (response) => {
+                        console.log("SUCCESS!", response.status, response.text);
+                        alert("SUCCESS!");
+                    },
+                    (error) => {
+                        console.log("FAILED...", error);
+                        alert("FAILED...", error);
+                    }
+                );
+            });
+    </script>
+
 
 
 
