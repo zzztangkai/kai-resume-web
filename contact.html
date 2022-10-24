@@ -162,12 +162,12 @@
                         </div>
                     </div>
                     <div class="contact-form mt-5">
-                        <form>
+                        <form name="myForm">
                             <h5 class="section-subHead mb-2"> Contact Form</h5>
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="form-group mt-3 wow fadeInUp" data-wow-duration="1.5s">
-                                        <input name="name" id="name" type="text" class="form-control b-box"
+                                        <input name="name" id="name" type="name" class="form-control b-box"
                                             placeholder="Your Name*" required>
                                     </div>
                                 </div>
@@ -183,7 +183,7 @@
                                 <div class="col-lg-12">
                                     <div class="form-group mt-3 wow fadeInUp" data-wow-duration="1.5s"
                                         data-wow-delay=".3s">
-                                        <input type="text" class="form-control b-box" id="subject"
+                                        <input name="subject" type="text" class="form-control b-box" id="subject"
                                             placeholder="Your Subject.." required />
                                     </div>
                                 </div>
@@ -192,7 +192,7 @@
                                 <div class="col-lg-12">
                                     <div class="form-group mt-3 wow fadeInUp" data-wow-duration="1.5s"
                                         data-wow-delay=".4s">
-                                        <textarea name="comments" id="comments" rows="4" class="form-control b-box"
+                                        <textarea name="message" id="message" rows="4" class="form-control b-box"
                                             placeholder="Your message..."></textarea>
                                     </div>
                                 </div>
@@ -200,7 +200,7 @@
                             <div class="row">
                                 <div class="col-lg-12 text-center mt-4 mb-5  wow fadeInUp" data-wow-duration="1.5s"
                                     data-wow-delay=".5s">
-                                    <a href="#" class="btn hover-state">Submit</a>
+                                    <a href="#" type="submit" class="btn hover-state">Submit</a>
                                 </div>
                             </div>
                         </form>
@@ -231,6 +231,17 @@
 
     <!-- Custom Js -->
     <script src="assets/js/custom.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+    <script type="text/javascript">      (function () {
+            emailjs.init("DHFvgdl2MX64yDwq2y-wQ");
+        })();
+    </script>
+
+
+    <script>
+        emailjs.sendForm("service_a7d3mie", "template_j42qi7g", "#myForm")
+    </script>
 
 
 
